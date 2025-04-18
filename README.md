@@ -78,7 +78,8 @@ Manter a qualidade do código é essencial para o sucesso do projeto. Certifique
 
 - Escrever testes para novos componentes e funcionalidades.
 - Executar os testes regularmente para evitar regressões.
-Utilizar ferramentas de lint para manter a consistência do código.
-Contribuições
-Contribuições são bem-vindas! Certifique-se de seguir as diretrizes do projeto e incluir testes para qualquer nova funcionalidade ou correção de bug.
+- Utilizar ferramentas de lint para manter a consistência do código.
 
+## Contribuições
+
+Contribuições são bem-vindas! Certifique-se de seguir as diretrizes do projeto e incluir testes para qualquer nova funcionalidade ou correção de bug.
