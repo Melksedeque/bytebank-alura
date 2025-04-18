@@ -1,70 +1,84 @@
-# Getting Started with Create React App
+# Bytebank - Alura
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este projeto foi criado com [Create React App](https://github.com/facebook/create-react-app) e adaptado para atender às necessidades do Bytebank.
 
-## Available Scripts
+## Scripts Disponíveis
 
-In the project directory, you can run:
+No diretório do projeto, você pode executar:
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Inicia o aplicativo no modo de desenvolvimento.\
+Abra [http://localhost:3000](http://localhost:3000) para visualizá-lo no navegador.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+A página será recarregada automaticamente quando você fizer alterações no código.\
+Erros de lint também serão exibidos no console.
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Executa os testes no modo interativo de observação (watch mode).\
+Os testes são configurados para garantir a qualidade e a funcionalidade do código.
 
-### `npm run build`
+#### Estrutura dos Testes
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Os testes estão localizados na pasta `src/__tests__/` ou próximos aos componentes que testam.
+- Utilizamos a biblioteca [Jest](https://jestjs.io/) para executar os testes.
+- Para testes de componentes React, utilizamos [React Testing Library](https://testing-library.com/).
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### Como Executar os Testes
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Certifique-se de que todas as dependências estão instaladas com `npm install`.
+2. Execute `npm test` para iniciar o modo interativo.
+3. Para rodar um teste específico, pressione a tecla `p` e digite o nome do arquivo de teste.
+4. Para sair do modo interativo, pressione `q`.
 
-### `npm run eject`
+#### Criando Novos Testes
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. Crie um arquivo com o sufixo `.test.js` próximo ao componente ou na pasta `__tests__`.
+2. Utilize os métodos da React Testing Library para renderizar componentes e verificar comportamentos.
+3. Exemplo básico de teste:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```javascript
+// Exemplo de teste básico
+import { render, screen } from '@testing-library/react';
+import App from './App';
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+test('renders learn react link', () => {
+  render(<App />);
+  const linkElement = screen.getByText(/learn react/i);
+  expect(linkElement).toBeInTheDocument();
+});
+```
+```bash
+npm run build
+```
+Cria o aplicativo para produção na pasta build.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Ele empacota corretamente o React no modo de produção e otimiza o build para o melhor desempenho.
 
-## Learn More
+Os arquivos são minificados e os nomes de arquivos incluem hashes.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Seu aplicativo está pronto para ser implantado!
+```bash
+npm run eject
+```
+**Nota: esta é uma operação irreversível. Uma vez que você eject, não pode voltar atrás!**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Se você não estiver satisfeito com as configurações padrão, você pode usar eject para ter controle total sobre as configurações.
 
-### Code Splitting
+## Saiba Mais
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Você pode aprender mais na [documentação do Create React App](https://create-react-app.dev/docs/getting-started/).
 
-### Analyzing the Bundle Size
+Para aprender React, confira a [documentação do React](https://react.dev/).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Testes e Qualidade de Código
 
-### Making a Progressive Web App
+Manter a qualidade do código é essencial para o sucesso do projeto. Certifique-se de:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- Escrever testes para novos componentes e funcionalidades.
+- Executar os testes regularmente para evitar regressões.
+Utilizar ferramentas de lint para manter a consistência do código.
+Contribuições
+Contribuições são bem-vindas! Certifique-se de seguir as diretrizes do projeto e incluir testes para qualquer nova funcionalidade ou correção de bug.
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
