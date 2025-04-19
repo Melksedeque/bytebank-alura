@@ -12,3 +12,9 @@ test("Deve renderizar uma lista de links", () => {
     const links = screen.getAllByRole("link");
     expect(links).toHaveLength(4);
 });
+
+test("Não deve renderizar o link para Extrato", () => {
+    render(<Menu />);
+    const linkExtrato = screen.queryByText("Extrato");
+    expect(linkExtrato).not.toBeInTheDocument();
+});
