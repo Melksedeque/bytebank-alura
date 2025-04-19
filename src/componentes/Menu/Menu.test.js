@@ -22,8 +22,6 @@ test("Não deve renderizar o link para Extrato", () => {
 test("Deve renderizar uma lista de links com a classe link", () => {
     render(<Menu />);
     const links = screen.getAllByRole("link");
-    links.forEach((link) => {
-        expect(link).toHaveClass("link");
-        expect(link).not.toHaveClass("inicial");
-    });
+    links.forEach((link) => expect(link).toHaveClass("link"));
+    expect(links).toMatchSnapshot();
 });
