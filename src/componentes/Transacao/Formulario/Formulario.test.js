@@ -23,3 +23,20 @@ describe('O componente <Formulario /> deve renderizar um campo de input:', () =>
     expect(campoTexto).toHaveValue(50);
   });
 });
+
+describe('O componente <Formulario /> deve renderizar um botão:', () => {
+  test('No documento', () => {
+    render(<Formulario />);
+    const botao = screen.getByRole('button');
+    expect(botao).toBeInTheDocument();
+  });
+
+  test('Que vai chamar um evento onSubmit ao clicar', () => {
+    const realizarTransacao = jest.fn();
+    render(<Formulario realizarTransacao={realizarTransacao} />);
+    const botao = screen.getByRole('button');
+
+    userEvent.click(botao);
+    expect(realizarTransacao).toHaveBeenCalled();
+  });
+});
