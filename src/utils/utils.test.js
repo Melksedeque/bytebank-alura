@@ -1,3 +1,17 @@
+import { calculaNovoSaldo } from './index';
+
+describe('Quando eu realizo uma transação:', () => {
+  test('Que é um depósito, o saldo deve aumentar', () => {
+    const transacao = {
+      transacao: 'Depósito',
+      valor: 50,
+    };
+    const novoSaldo = calculaNovoSaldo(transacao, 100);
+
+    expect(novoSaldo).toBe(150);
+  });
+});
+
 test('Deve retornar o valor do saldo atualizado com o rendimento', () => {
   const saldo = 1000;
   const rendimento = 0.005;
