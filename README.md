@@ -1,6 +1,6 @@
 # Bytebank - Alura
 
-Este projeto foi criado com [Create React App](https://github.com/facebook/create-react-app) e adaptado para atender às necessidades do Bytebank.
+Bytebank é uma aplicação web desenvolvida em React.JS, criada a partir do [Create React App](https://github.com/facebook/create-react-app). Este projeto demonstra a implementação de funcionalidades bancárias essenciais, proporcionando uma prática valiosa em desenvolvimento front-end com React.
 
 ## Scripts Disponíveis
 
